@@ -17,4 +17,24 @@ fun main(args: Array<String>){
 
     println( resultado )
 
+
+    // var (CamelCase) = valor definido e alterado durante a execução
+        var currentAge = 23
+
+        // var pode receber valor inteiro(23) ou null
+        var currentAge1: Int?
+
+
+    // val (CamelCase) = valor definido durante a execução
+        val currentAge2 = 23
+
+        // var pode receber valor inteiro(23) ou null
+        var currentAge3: Int?
+
+    /* const val (SNAKE_CASE) = valor definido durante a compilação
+        //const ficam fora da função main
+        //const val MIN_AGE= 16
+        //const val MAX_AGE= 68
+    */
+
 }
