@@ -21,6 +21,4 @@ fun main(args: Array<String>) {
     } else{
         println("A pessoa nao pode doar sangue!")
     }
-
-
 }
