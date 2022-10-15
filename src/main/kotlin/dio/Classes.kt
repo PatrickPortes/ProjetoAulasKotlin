@@ -1,3 +1,5 @@
+package dio
+
 class Casa {
 
     //Propriedades
