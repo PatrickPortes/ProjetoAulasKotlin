@@ -2,19 +2,19 @@ package ytb.oop.example2
 
 fun main(){
 
-    val engine = Engine()
+    val motorCombustao = MotorCombustao()
+    val fuca = Car(motorCombustao)
+    fuca.ligar()
+    fuca.drive()
+    fuca.drive()
+    fuca.drive()
+    fuca.desligar()
 
-    val car = Car(engine)
-    car.ligarCarro()
-    car.desligarCarro()
-    car.drive()
-
-    /*
-    car.color = "red"
-    car.brak()
-    car.gear()
-    car.honk()
-    */
-
+    val motorEletrico = MotorEletrico()
+    val tesla = Car(motorEletrico)
+    tesla.ligar()
+    tesla.drive()
+    tesla.drive()
+    tesla.desligar()
 
 }

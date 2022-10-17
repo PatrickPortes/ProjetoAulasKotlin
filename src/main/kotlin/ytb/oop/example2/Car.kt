@@ -1,26 +1,42 @@
 package ytb.oop.example2
 
 class Car constructor(
-    private val engine: Engine
-){
-    var color: String? = null
+    private val motor: MotorImpl
+) : Motor by motor{
 
-    fun ligarCarro(){
-        println("Ligando o Carro!")
-        engine.ligar()
-    }
-
-    fun desligarCarro(){
-        println("Desligando o Carro!")
-        engine.desligar()
-    }
+    var cor: String? = null
 
     fun drive(){
-        if (engine.estaLigado()){
+
+        when{
+            !motor.estaLigado() -> println("LIGA O CARRO PRIMEIRO NE!")
+            !motor.temAutonomia() -> {
+                motor.desligar()
+
+                when(motor) {
+                    is MotorEletrico -> println("A Energia da Bateria Acabou!")
+                    is MotorCombustao -> println("O Combustivel Acabou!")
+                }
+            }
+            else -> {
+                motor.gastando()
+
+                when(motor) {
+                    is MotorEletrico -> println("Carro Andando!")
+                    is MotorCombustao -> println("Carro Andando! VRUM VRUM!")
+                }
+            }
+        }
+
+        /* IF ELSE:
+        if (engine.estaLigado() && engine.temCombustivel()){
             println("VRUMMMMMMMM")
-        } else{
+        } else if (!engine.temCombustivel()){
+            println("O Combustivel Acabou!")
+        } else {
             println("LIGA O CARRO PRIMEIRO NE!")
         }
+        engine.gastandoCombustivel() */
     }
 
     fun honk(){

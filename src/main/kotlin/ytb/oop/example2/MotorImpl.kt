@@ -1,18 +1,23 @@
 package ytb.oop.example2
 
-class Engine {
+abstract class MotorImpl : Motor {
 
     private var ligado: Boolean = false
 
-    fun ligar(){
+    override fun ligar(){
         ligado = true
     }
 
-    fun desligar(){
+    override fun desligar(){
         ligado = false
     }
 
     fun estaLigado(): Boolean{
         return ligado
     }
+
+    abstract fun temAutonomia(): Boolean
+
+    abstract fun gastando()
+
 }
