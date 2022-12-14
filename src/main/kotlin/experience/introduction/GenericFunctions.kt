@@ -1,5 +1,7 @@
 package experience
 
+import experience.introduction.MutableStack
+
 fun <E> mutableStackOf(vararg elements: E) = MutableStack(*elements)
 
 fun main() {

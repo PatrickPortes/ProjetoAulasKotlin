@@ -1,4 +1,4 @@
-package experience
+package experience.introduction
 
 class MutableStack<E>(vararg items: E) {              // 1
 
