@@ -15,7 +15,7 @@ class Circle(var radius: Double) {  // Constructor = Parameter Scope
 
 fun createCircles(radii: List<Double>): List<Circle> {
     return radii.map { radius ->
-        Circle(radius)              //Lambda Scopee
+        Circle(radius)              //Lambda Scope
     }
 }
 
